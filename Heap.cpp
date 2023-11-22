@@ -38,12 +38,3 @@ void ExtractMax(vector<int>* nums) {
 	(*nums).pop_back();
 	SiftDown(nums, 0);
 }
-int main(void) {
-	vector<int> nums = { 1,7,8,45,6,4,12,78,465,7,74,15,64,23 };
-	heapify(&nums);
-	for (int i = 0; i < 14; i++) {
-		ExtractMax(&nums);
-	}
-	return 0;
-
-}
