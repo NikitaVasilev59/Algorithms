@@ -3,13 +3,6 @@ struct Node {
 	int value;
 	struct Node* left;
 	struct Node* right;
-	Node(int v) {
-		value = v;
-		left = nullptr;
-		right = nullptr;
-	}
-	Node() : Node(0) {
-	}
 };
 void swap(struct Node* t1, struct Node* t2) {
 	int temp = t1->value;
@@ -29,7 +22,9 @@ bool Find(struct Node* node, int value) {
 	return Find(node->right, value);
 }
 struct Node* create_node(int value) {
-	struct Node* new_node = new struct Node(value);
+	struct Node* new_node = new struct Node;
+	new_node->value = value;
+	new_node->left = new_node->right = nullptr;
 	return new_node;
 }
 void insert(struct Node** node, int value) {
