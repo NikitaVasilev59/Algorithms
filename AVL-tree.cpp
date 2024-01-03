@@ -95,7 +95,7 @@ struct Node* erase(struct Node* root, int value) {
 		root->right = erase(root->right, value);
 	}
 	else if (value < root->value) {
-		root->left = erase(root->right, value);
+		root->left = erase(root->left, value);
 	}
 	else {
 		if (root->right == nullptr || root->right == nullptr) {
